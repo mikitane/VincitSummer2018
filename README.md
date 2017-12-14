@@ -13,7 +13,7 @@ Tested with Node.js version 6.0.0 and npm v3.8.6.
 
 ```
 $ git clone https://github.com/mikitane/VincitSummer2018.git
-$ cd summer-2018
+$ cd VincitSummer2018
 $ npm install
 ```
 
