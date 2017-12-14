@@ -13,7 +13,7 @@ class NavbarCustom extends Component {
       <Navbar fluid inverse collapseOnSelect style={{backgroundColor:'black',borderColor:'black'}}>
           <Navbar.Header>
             <Navbar.Brand>
-              <a href="http://localhost:3000">
+              <a href="/">
               <img className="navbarLogo" alt="" src={Logo}/><p>Duck sightings</p></a>
             </Navbar.Brand>
             <Navbar.Toggle />
