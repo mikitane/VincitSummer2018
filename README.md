@@ -3,19 +3,14 @@
 This app is a part of Vincit Summer 2018 application. Backend is done by Vincit Group Oyj.
 My own production is located in frontend directory.
 
-## Requirements
+In this app you are able to view all the duck sightings that others have posted.
+You can also add your own sightings. App has two different view choices: cards
+or list. The sightings can be sorted by date.
 
-Requires [Node.js](https://nodejs.org/) installed with npm. [Git](https://git-scm.com/) is used for cloning repository.
+Demo: https://stormy-basin-10587.herokuapp.com/
 
-Tested with Node.js version 6.0.0 and npm v3.8.6.
+Link to original Vincit project: https://github.com/Vincit/summer-2018/
 
-## Install
-
-```
-$ git clone https://github.com/mikitane/VincitSummer2018.git
-$ cd VincitSummer2018
-$ npm install
-```
 
 ## Run
 
@@ -33,4 +28,12 @@ $ PORT=<port> node server.js
 
 where you should replace `<port>` with wanted port number i.e. 3000.
 
+## TECH
 
+### Backend
+- Node.js
+
+### Frontend
+- React
+- React Bootstrap
+- Redux
