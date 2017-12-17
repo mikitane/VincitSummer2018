@@ -28,7 +28,7 @@ export default class SightingCard extends Component {
 
 
     return(
-      <div className="col-lg-3">
+      <div className="col-md-4 col-lg-3 ">
         <div className="well sightingCard">
           <img className="sightingCardImage" alt="" src={images[species]}  />
           <div className="sightingCardInfo">
