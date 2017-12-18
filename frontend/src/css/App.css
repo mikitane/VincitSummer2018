@@ -109,6 +109,8 @@
 .sightingBlockImage {
   margin-top:15px;
   margin-left:15px;
+  margin-right:5px;
+  margin-bottom;5px;
   display:block;
   border-radius:50%;
   height:50px;
