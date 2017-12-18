@@ -22,15 +22,14 @@ class AddSightingModal extends Component {
       validCount:true,
       description:"",
       validDescription:null,
-      dateTime:new Date(),
+      dateTime:"",
       validDatetime:false,
     };
     this.setSelectedSpecies = this.setSelectedSpecies.bind(this)
     this.setCount = this.setCount.bind(this)
     this.setDescription = this.setDescription.bind(this)
     this.setDateTime = this.setDateTime.bind(this)
-    this.setDate = this.setDate.bind(this)
-    this.setTime = this.setTime.bind(this)
+
     this.onToggle = this.onToggle.bind(this)
     this.handleAdd = this.handleAdd.bind(this)
 
@@ -72,69 +71,26 @@ class AddSightingModal extends Component {
   }
 
   setDateTime(dateTime) {
-    this.setState({
-      dateTime:dateTime,
-      validDatetime:true
-    })
-  }
 
-  setDate(date) {
-    console.log(date)
-    var now = new Date()
-    var dateTime = new Date(this.state.dateTime);
-    if (date === "") {
-      this.setState({
-        dateTime:date,
-        validDatetime:false
-      })
-    } else {
-      var year = date.split("-")[0]
-      var month = date.split("-")[1] - 1
-      var day = date.split("-")[2]
-      console.log(year,month,day)
-      dateTime.setFullYear(year,month,day)
-
-      if (dateTime > now ) {
+    if (dateTime != "") {
+      var date = new Date(dateTime)
+      var now = new Date()
+      if (date > now) {
         this.setState({
-          dateTime:dateTime,
+          dateTime:date.toISOString(),
           validDatetime:false
         })
       } else {
-        this.setState({
-          dateTime:dateTime,
-          validDatetime:true
-        })
-      }
+      this.setState({
+        dateTime:date.toISOString(),
+        validDatetime:true
+      })
     }
-
-}
-  setTime(time) {
-    var now = new Date()
-    var dateTime = new Date(this.state.dateTime);
-    if (time === "") {
-      dateTime.setHours(0,0)
+    } else {
       this.setState({
-        dateTime:dateTime,
+        dateTime:"",
         validDatetime:false
       })
-    } else {
-
-      var hours = time.split(":")[0]
-      var minutes = time.split(":")[1]
-
-      dateTime.setHours(hours,minutes)
-
-      if (dateTime > now ) {
-        this.setState({
-          dateTime:dateTime,
-          validDatetime:false
-        })
-      } else {
-        this.setState({
-          dateTime:dateTime,
-          validDatetime:true
-        })
-      }
     }
 
   }
@@ -146,20 +102,17 @@ class AddSightingModal extends Component {
       validCount:true,
       description:"",
       validDescription:null,
-      date:"",
-      validDate:false,
-      time:"",
-      validTime:false,
+      dateTime:"",
+      validDatetime:false,
     })
     this.props.toggleModal()
   }
 
   handleAdd() {
-    var dateTime = new Date(this.state.dateTime).toISOString()
     var payload = {
       species:this.state.selectedSpecies,
       description:this.state.description,
-      dateTime:dateTime,
+      dateTime:this.state.dateTime,
       count:this.state.count,
       }
     this.props.addSighting(payload)
@@ -169,10 +122,9 @@ class AddSightingModal extends Component {
       validCount:true,
       description:"",
       validDescription:null,
-      date:"",
-      validDate:false,
-      time:"",
-      validTime:false,
+      dateTime:"",
+      validDatetime:false,
+
     })
     this.props.toggleModal()
   }

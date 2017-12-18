@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import gadwall from '../../../img/gadwall.jpg'
-import mallard from '../../../img/mallard.png'
+import mallard from '../../../img/mallard.jpg'
 import canvasback from '../../../img/canvasback.jpg'
 import redhead from '../../../img/redhead.jpg'
 import lesserScaup from '../../../img/lesser scaup.jpg'

@@ -15,5 +15,5 @@ const initialState = {
 
 
 export default createStore(
-  reducer,initialState,applyMiddleware(thunk,logger)
+  reducer,initialState,applyMiddleware(thunk)
 );
