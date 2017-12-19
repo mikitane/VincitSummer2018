@@ -1,15 +1,15 @@
 # Duck sightings app
 
-This app is a part of Vincit Summer 2018 application. Backend is done by Vincit Group Oyj.
+This app is a part of Vincit Summer 2018 application. The backend is done by Vincit Group Oyj.
 My own production is located in frontend directory.
 
 In this app you are able to view all the duck sightings that others have posted.
-You can also add your own sightings. App has two different view choices: cards
+You can also add your own sightings. The app has two different view choices: cards
 or list. The sightings can be sorted by date.
 
 Demo: https://stormy-basin-10587.herokuapp.com/
 
-Link to original Vincit project: https://github.com/Vincit/summer-2018/
+Link to the original Vincit project: https://github.com/Vincit/summer-2018/
 
 
 ## Run
