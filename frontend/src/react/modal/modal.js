@@ -17,7 +17,7 @@ class AddSightingModal extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      selectedSpecies:"",
+      selectedSpecies:"s",
       count:1,
       validCount:true,
       description:"",
@@ -75,7 +75,7 @@ class AddSightingModal extends Component {
     if (dateTime != "") {
       var date = new Date(dateTime)
       var now = new Date()
-      if (date > now) {
+      if (date > now || date.getFullYear() < 2000) {
         this.setState({
           dateTime:date.toISOString(),
           validDatetime:false

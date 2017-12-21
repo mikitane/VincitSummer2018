@@ -14,7 +14,7 @@ export default class DateTimeInput extends Component {
 
     if (this.props.dateTime !== "") {
       var date = new Date(this.props.dateTime)
-      var year = date.getFullYear()
+      var year = "0".repeat(4 - String(date.getFullYear()).length) + date.getFullYear()
       var month = ((date.getMonth() + 1)<10?'0':'') + (date.getMonth() + 1)
       var day = (date.getDate()<10?'0':'') + date.getDate()
       var hours = (date.getHours()<10?'0':'') + date.getHours()
