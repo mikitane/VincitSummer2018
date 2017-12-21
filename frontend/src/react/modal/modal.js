@@ -17,7 +17,7 @@ class AddSightingModal extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      selectedSpecies:"s",
+      selectedSpecies:"",
       count:1,
       validCount:true,
       description:"",
