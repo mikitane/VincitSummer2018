@@ -30,9 +30,11 @@ export default class SightingBlock extends Component {
 
       <div className="sightingBlock">
         <div className="row">
+
           <div className="col-sm-2">
             <img className="sightingBlockImage" alt="" src={images[species]}  />
           </div>
+
           <div className="col-sm-10">
             <div className="sightingBlockInfo">
               <div className="sightingBlockInfoRow">
@@ -42,20 +44,19 @@ export default class SightingBlock extends Component {
                 </div>
               </div>
 
-
               <div  style={{marginBottom:'5px'}}>
                 <h4>Description:</h4>
               </div>
 
-                <p>{this.props.sighting.description}</p><br/>
-                <div className="sightingBlockDate">
-
-                  <h4>Seen:</h4><p>{day+"."+month+"."+year+" at "+hours+":"+minutes}</p>
-                </div>
+              <p>{this.props.sighting.description}</p><br/>
+              
+              <div className="sightingBlockDate">
+                <h4>Seen:</h4><p>{day+"."+month+"."+year+" at "+hours+":"+minutes}</p>
+              </div>
             </div>
           </div>
-        </div>
 
+        </div>
       </div>
 
     )

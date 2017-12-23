@@ -18,12 +18,15 @@ class FilterButtons extends Component {
     return(
       <ToggleButtonGroup type="radio" name="options" defaultValue={"down"}
         onChange={this.onChange.bind(this)}>
+        
         <ToggleButton value={"down"} className="navbar-btn">
           <span className="glyphicon glyphicon-triangle-bottom" ></span>
         </ToggleButton>
+
         <ToggleButton value={"up"} className="navbar-btn">
           <span className="glyphicon glyphicon-triangle-top"> </span>
         </ToggleButton>
+
       </ToggleButtonGroup>
     )
 

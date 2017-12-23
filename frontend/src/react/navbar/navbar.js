@@ -18,20 +18,20 @@ class NavbarCustom extends Component {
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
-          <Navbar.Collapse>
 
-              <div style={{float:'right'}}>
+          <Navbar.Collapse>
+            <div style={{float:'right'}}>
+
               <ButtonToolbar >
 
                 <FilterButtons></FilterButtons>
                 <ViewButtons></ViewButtons>
                 <Button bsStyle="success" className="navbar-btn"
                   onClick={this.props.toggleModal}>Add a new sighting!</Button>
-
+                  
               </ButtonToolbar>
 
             </div>
-
           </Navbar.Collapse>
 
         </Navbar>

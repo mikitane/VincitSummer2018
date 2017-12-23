@@ -4,7 +4,7 @@ export function getInitialState() {
       type: 'SET_FETCHING',
       payload: true
     })
-    fetch('/species')
+    fetch('http://localhost:3001/species')
     .then(blob => blob.json())
     .then(data =>{
     dispatch({
@@ -12,8 +12,9 @@ export function getInitialState() {
       payload: data
     })
   })
+  .catch((error)=> alert("Error fetching species!"))
 
-    fetch('/sightings')
+    fetch('http://localhost:3001/sightings')
     .then(blob => blob.json())
     .then(data =>{
     dispatch({
@@ -27,7 +28,14 @@ export function getInitialState() {
       type: 'SET_FETCHING',
       payload: false
     })
-
   })
+  .catch((error)=> {
+    alert("Error fetching sightings!")
+    dispatch({
+      type: 'SET_FETCHING',
+      payload: false
+    })
+  })
+
   }
 }

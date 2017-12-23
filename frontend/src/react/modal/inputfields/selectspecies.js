@@ -11,15 +11,16 @@ export default class SelectSpeciesInput extends Component {
 
     return(
       <form>
-      <FormGroup controlId="formControlsSelect">
-        <ControlLabel>Select the species.</ControlLabel>
-        <FormControl componentClass="select" placeholder="select"
-          onChange={(e) => this.props.setSelectedSpecies(e.target.value)} defaultValue="">
-          <option disabled value = "">Select the species:</option>
-          {options}
-        </FormControl>
-      </FormGroup>
-    </form>
+        <FormGroup controlId="formControlsSelect">
+          <ControlLabel>Select the species.</ControlLabel>
+          <FormControl componentClass="select" placeholder="select"
+            onChange={(e) => this.props.setSelectedSpecies(e.target.value)}
+            defaultValue="">
+            <option disabled value = "">Select the species:</option>
+            {options}
+          </FormControl>
+        </FormGroup>
+      </form>
 
     )
   }

@@ -13,18 +13,18 @@ export default class ListView extends Component {
     return(
       <div className="row">
         <div className="col-md-4 col-md-offset-4">
-      <ReactCSSTransitionGroup
-        transitionName="sightingBlocks"
-        transitionAppear={true}
-        transitionAppearTimeout={1000}
-        transitionEnter={true}
-        transitionEnterTimeout={1000}>
+          <ReactCSSTransitionGroup
+            transitionName="sightingBlocks"
+            transitionAppear={true}
+            transitionAppearTimeout={1000}
+            transitionEnter={true}
+            transitionEnterTimeout={1000}>
 
-              {blocks}
+                  {blocks}
 
-      </ReactCSSTransitionGroup>
-    </div>
-  </div>
+          </ReactCSSTransitionGroup>
+        </div>
+      </div>
 
 
 

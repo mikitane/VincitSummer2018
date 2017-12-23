@@ -17,23 +17,22 @@ class ViewButtons extends Component {
     return(
       <ToggleButtonGroup type="radio" name="options" defaultValue={"cards"}
         onChange={this.onChange.bind(this)}>
+
         <ToggleButton value={"cards"} className="navbar-btn">
           <span className="glyphicon glyphicon-th"></span>
         </ToggleButton>
+        
         <ToggleButton value={"list"} className="navbar-btn" active="true">
           <span className="glyphicon glyphicon-th-list"> </span>
         </ToggleButton>
 
       </ToggleButtonGroup>
     )
-
   }
-
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-
       changeView: (view) => {
         dispatch(changeView(view))
       }

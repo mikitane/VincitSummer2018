@@ -4,7 +4,7 @@ export function addSighting(payload) {
       type: 'SET_FETCHING',
       payload: true
     })
-    fetch('/sightings',{
+    fetch('http://localhost:3001/sightings',{
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body: JSON.stringify(payload)
@@ -15,9 +15,11 @@ export function addSighting(payload) {
       type: 'ADD_SIGHTING',
       payload: data
     })
+    })
+    .catch((error)=> alert("Error adding the sighting."))
     dispatch({
       type: 'SET_FETCHING',
       payload: false
-    })})
+    })
   }
 }
