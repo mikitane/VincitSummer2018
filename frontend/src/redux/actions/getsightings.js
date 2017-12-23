@@ -4,7 +4,7 @@ export function getSightings() {
       type: 'SET_FETCHING',
       payload: true
     })
-    fetch('http://localhost:3001/sightings')
+    fetch('/sightings')
     .then(blob => blob.json())
     .then(data =>{
     dispatch({

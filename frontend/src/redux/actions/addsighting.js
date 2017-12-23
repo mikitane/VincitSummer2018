@@ -4,7 +4,7 @@ export function addSighting(payload) {
       type: 'SET_FETCHING',
       payload: true
     })
-    fetch('http://localhost:3001/sightings',{
+    fetch('/sightings',{
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body: JSON.stringify(payload)

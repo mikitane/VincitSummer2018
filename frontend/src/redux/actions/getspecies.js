@@ -4,7 +4,7 @@ export function getSpecies() {
       type: 'SET_FETCHING',
       payload: true
     })
-    fetch('http://localhost:3001/species')
+    fetch('/species')
     .then(blob => blob.json())
     .then(data =>{
     dispatch({
